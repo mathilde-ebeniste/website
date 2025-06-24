@@ -1,0 +1,321 @@
+# Site settings
+baseurl = "https://example.org/"
+languageCode = "fr-FR"
+title = "Mathilde Landois"
+theme = "hugo-agency-theme"
+
+# Enter your tracking code to enable Google Analytics
+googleAnalytics = ""
+
+[params]
+  # You can use Markdown syntax for urls [text](//url.to/source) or
+  # most longer texts.
+  #
+  # All icons using Fontawesome's icon font. Look at fortawesome.github.io/Font-Awesome/icons/
+  # for more icons. The icons are represented by their corresponding
+  # CSS class.
+
+  # To provide some metadata for search engines feel free to add a few
+  # information about you and your website.
+  name = "Mathilde Landois"
+  description = ""
+  # email = "your@email.com"
+
+  # Link custom assets relative to /static
+  custom_css = []
+  custom_js  = []
+  favicon    = "favicon.ico"
+
+  # Possibility to disable external/additional fonts
+  # Exception: Fontawesome
+  disableFonts = false
+
+  # 404 error customization
+  [params.error404]
+    heading = "La page n'a pas pu être trouvée"
+    text = "Veuillez visiter [cette page](/)"
+
+  # Optional piwik tracking
+  #[params.analytics.piwik]
+  #  URL = "https://stats.example.com"
+  #  ID = "42"
+  #  # Track all subdomains with "*.example.com"
+  #  domain = "www.example.com"
+  #  # Optional integrity check hash
+  #  hash = "sha512-RfeD0pacGTqy9m7U6PgehQfS4cc7SIt+e+P+H5e848kEvB/RW84CUGO3O4O3LNbxjevym6KPUZ8muPsMrI8WIw=="
+
+  # Navigation
+  [params.navigation]
+    brand = "Mathilde Landois"
+    # Optional logo as brand stored in img/
+    #logo = "logo.svg"
+    services = "Services"
+    projets = "Projets"
+    about = "Formation"
+    team = "L'équipe"
+    contact = "Contact"
+
+    # Add custom links. Those can be pre- and postpended to the default menu above.
+    # Use the weight attribute to order your custom links. Uncomment the example
+    # below and replace the values with your own.
+
+    # prepended links
+    #[[menu.prepend]]
+    #  url = "http://gohugo.io"
+    #  name = "Hugo"
+    #  weight = 10
+
+    # postpended links
+    #[[menu.postpend]]
+    #  url = "http://gohugo.io"
+    #  name = "External link"
+    #  weight = 10
+
+
+  # Hero section
+  [params.hero]
+    # To change the background image of the hero, replace 'header-bg.jpg' in
+    # the 'static/img' folder.
+    title = "Bienvenue dans mon atelier !"
+    subtitle = "Meubles sur mesure, restauration et agencements en bois"
+    buttonText = "Plus d'information"
+
+
+  # Services section
+  [params.services]
+    enable = true
+    title = "Services"
+    #subtitle = "Lorem ipsum dolor sit amet consectetur."
+
+    [[params.services.row]]
+
+    [[params.services.row.list]]
+      icon = "fa-hammer"
+      title = "Création de meubles sur mesure"
+      description = "Conception et fabrication de meubles uniques, adaptés à vos besoins et à votre intérieur : tables, bibliothèques, commodes, etc. Chaque pièce est pensée avec soin et réalisée à la main."
+      url = "#"
+
+    [[params.services.row.list]]
+      icon = "fa-wrench"
+      title = "Restauration de mobilier ancien"
+      description = "Donnez une seconde vie à vos meubles anciens. Réparation, décapage, traitement du bois et finitions traditionnelles pour préserver l’authenticité et le charme d’époque."
+      url = "#"
+
+    [[params.services.row.list]]
+      icon = "fa-toolbox"
+      title = "Agencements intérieurs personnalisés"
+      description = "Réalisation d’agencements en bois pour optimiser vos espaces : cuisines, rangements, bureaux, têtes de lit, etc. Fonctionnalité et esthétique au service de votre habitat."
+      url = "#"
+
+  # Projets section
+  [params.projets]
+    enable = true
+    # All projects defined in their own files. You can find example projects
+    # at 'exampleSite/data/projects'. Copy the 'projects' folder into the 'data' directory
+    # at the root of this Hugo site.
+    # For more informtion take a look at the README.
+    title = "Projets"
+    subtitle = "Un aperçu de mes créations en bois, faites avec soin et passion."
+
+    [params.projets.modal]
+      client = "Client"
+      date = "Date"
+      category = "Catégorie"
+      buttonText = "Fermer le projet"
+
+
+    # About section
+  [params.about]
+    enable = true
+    title = "Formation"
+    subtitle = "Chaque création naît d’un dialogue entre l’art, la culture et la main qui façonne."
+    endpoint = "À suivre ..."
+
+    # The events will be listed from the top to the bottom.
+    # All images are stored under 'static/img/about'.
+    # Replace them with your own.
+    [[params.about.events]]
+      img = "beau_arts.jpg"
+      date = "2014-2015"
+      title = "Première année des beau arts"
+      description = "Ecole Nationale Supérieur d’Art et de Design - NANCY"
+
+    [[params.about.events]]
+      img = "universite_lorraine.jpg"
+      date = "2014-2018"
+      title = "Master Etudes Culturelles"
+      description = "Université de Lorraine - NANCY"
+
+    [[params.about.events]]
+      img = "afpia.png"
+      date = "2024-2025"
+      title = "CAP Ébéniste"
+      description = "AFPIA - Liffol-Le-Grand"
+
+  # Team section
+  [params.team]
+    enable = false
+    # Possibility to center items
+    #center = true
+    title = "Our amazing team"
+    subtitle = "Lorem ipsum dolor sit amet consectetur."
+    description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde."
+
+    # All team member's pictures are stored under 'static/img/team'.
+    # Replace them with your own too.
+    # Suggestion: Image size should be at least 360px*360px or the alignment might be affected.
+    [[params.team.members]]
+      img = "1.jpg"
+      name = "Kay Garland"
+      position = "Lead Designer"
+      reportsTo = "CTO"
+      livesIn = "[Munich, Germany](#some-maps-url)"
+      scope = [
+        "UX for [member dashboard](#)",
+        "Maintainer for [awesome-project](#)",
+        "Open Source [community management](#)"
+      ]
+      # For bio markdown and even multiline strings are available.
+      bio = """Kay is an awesome Lead Designer with heaps of experience in the field of UX.
+She worked at Pied Piper for years until they went belly up."""
+      social = [
+        ["fa-twitter", "#"],
+        ["fa-facebook", "#"],
+        ["fa-linkedin", "#"]
+      ]
+
+    [[params.team.members]]
+      img = "2.jpg"
+      name = "Larry Parker"
+      position = "Lead Marketer"
+      social = [
+        ["fa-twitter", "#"],
+        ["fa-facebook", "#"],
+        ["fa-linkedin", "#"]
+      ]
+
+    [[params.team.members]]
+      img = "3.jpg"
+      name = "Diana Pertersen"
+      position = "Lead Developer"
+      social = [
+        ["fa-twitter", "#"],
+        ["fa-facebook", "#"],
+        ["fa-linkedin", "#"]
+      ]
+
+  # Client section
+    [params.clients_list]
+      enable = false
+      # Possibility to center items
+      #center = true
+      # Optional client title specifying the involvement
+      #title = "Used and trusted by"
+
+      # All the clients' logos are stored under 'static/img/logos'.
+      # Replace them with your clients's logos.
+      # Suggestion: .svg in the size of 280px*80px looks good
+      [[params.clients]]
+        logo = "envato.jpg"
+        link = "#"
+
+      [[params.clients]]
+        logo = "designmodo.jpg"
+        link = "#"
+
+      [[params.clients]]
+        logo = "themeforest.jpg"
+        link = "#"
+
+      [[params.clients]]
+        logo = "creative-market.jpg"
+        link = "#"
+
+  # Contact section
+  [params.contact]
+    enable = true
+    title = "Contacter moi"
+    subtitle  = ""
+    buttonText = "Envoyer"
+    # netlify = true
+
+    # Since this template is static, the contact form uses www.formspree.io as a
+    # proxy. The form makes a POST request to their servers to send the actual
+    # email. Visitors can send up to a 1000 emails each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - set your email address under 'email' below
+    # - upload the generated site to your server
+    # - send a dummy email yourself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
+
+    # It is possible to substitute formspring with other providers
+    # as an example the mailout plugin from caddy.
+    # Provide the post URL for the form and depending on the provider
+    # add some custom JS script to finish the implementation.
+    # postURL = "https://example.com/mailout/"
+
+    email = "your@email.com"
+
+    # Success and error message overwrite for async contact form
+    thanks = "Merci de m'avoir contacté."
+    error = "Le message n’a pas pu être envoyé. Veuillez nous contacter à l’adresse mail@example.com à la place."
+
+    [params.contact.captcha]
+      # sitekey = ""
+
+    # 'warning' defines error messages for invalid inputs
+    [params.contact.form.name]
+      text = "Votre nom *"
+      warning = "Veuillez entrer votre nom."
+
+    [params.contact.form.email]
+      text = "Votre Email *"
+      warning = "Veuillez entrer votre adresse mail."
+
+    [params.contact.form.phone]
+      text = "Votre téléphone *"
+      warning = "Veuillez entrer votre numéro de téléphone."
+
+    [params.contact.form.message]
+      text = "Votre Message *"
+      warning = "Veuillez entrer un message."
+
+      # Add optional form fields to identify contact forms
+      #[[params.contact.form.hidden]]
+      #  name = "someID"
+      #  value = "example.com"
+      #
+      #[[params.contact.form.hidden]]
+      # Special values for name such as "page" and "site" will be autofilled
+      #  name = "page"
+
+  # Footer section
+  [params.footer]
+    enable = true
+    copyright = "Publié sous la licence Apache 2.0."
+
+    [[params.footer.social]]
+      icon = "fa-twitter"
+      link = "#"
+      title = "Twitter"
+
+    [[params.footer.social]]
+      icon = "fa-edge-legacy"
+      link = "#"
+      title = "Facebook"
+
+    [[params.footer.social]]
+      icon = "fa-linkedin"
+      link = "#"
+      title = "LinkedIn"
+
+    [[params.footer.quicklinks]]
+      text = "Privacy Policy"
+      link = "#"
+
+    [[params.footer.quicklinks]]
+      text = "Terms of Use"
+      link = "#"
